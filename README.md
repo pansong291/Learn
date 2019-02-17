@@ -1,8 +1,8 @@
 # Learn
 [Android Proguard(混淆)](https://www.jianshu.com/p/60e82aafcfd0)  
 [像360悬浮窗那样，用WindowManager实现炫酷的悬浮迷你音乐盒（上）](https://www.jianshu.com/p/95ceb0a2ed27)，WindowManager.LayoutParams属性详解。  
-[Android关于Canvas你所知道的和不知道的一切](https://www.jianshu.com/p/78394525181b)  
-[Android关于Path你所知道的和不知道的一切](https://www.jianshu.com/p/78394525181b)  
+[Android关于Canvas你所知道的和不知道的一切](https://www.jianshu.com/p/4bc05f646bfe)  
+[Android关于Path你所知道的和不知道的一切](https://www.jianshu.com/p/d080579ae048)  
 [Android关于Paint你所知道的和不知道的一切](https://www.jianshu.com/p/78394525181b)  
 [android 打开各种文件（setDataAndType）](http://zengyan2012.iteye.com/blog/1646492)，详细地介绍了大部分文件的file type。  
 [从内存方面解释Java中String与StringBuilder的性能差异](http://m.jb51.net/article/84536.htm)  
