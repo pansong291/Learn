@@ -15,5 +15,5 @@
 [停止Java线程，小心interrupt()方法](http://m.blog.csdn.net/wxwzy738/article/details/8516253)  
 [安卓使用Root权限实现后台模拟全局按键、触屏事件方法（类似按键精灵）](http://www.cnblogs.com/cappuccino/p/4488503.html)  
 [Android Service完全解析，关于服务你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/11952435)  
-[Android 高级混淆和代码保护技术](http://drakeet.me/android-advanced-proguard-and-security)  
+[Android 高级混淆和代码保护技术](https://blog.csdn.net/hqiangtai/article/details/76037244)  
 [android悬浮窗口的实现](http://blog.csdn.net/stevenhu_223/article/details/8504058)  
