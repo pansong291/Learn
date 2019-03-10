@@ -17,3 +17,4 @@
 [Android Service完全解析，关于服务你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/11952435)  
 [Android 高级混淆和代码保护技术](https://blog.csdn.net/hqiangtai/article/details/76037244)  
 [android悬浮窗口的实现](http://blog.csdn.net/stevenhu_223/article/details/8504058)  
+[Android通知栏点击无法启动Activity的问题](https://blog.csdn.net/asia273360657/article/details/45889351)
