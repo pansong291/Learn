@@ -1,9 +1,9 @@
 # Learn
-[关于开放源代码许可证的选择](http://choosealicense.online/)  
+[关于开放源代码许可证的选择](http://choosealicense.online/)  
 几条经验美化你的GitHub开源项目：[微信文章](https://mp.weixin.qq.com/s/kbY96PSAcSIAwRHRNjBmZw?)，[简书文章](https://www.jianshu.com/p/d587b91bacb3)  
 [Material Icons](https://material.io/tools/icons)  
-[TinyPNG](https://tinypng.com)图片压缩  
-[cloudconvert](https://cloudconvert.com)文件转换  
+[TinyPNG](https://tinypng.com)，图片压缩  
+[cloudconvert](https://cloudconvert.com)，文件转换  
 [Android Proguard(混淆)](https://www.jianshu.com/p/60e82aafcfd0)  
 [像360悬浮窗那样，用WindowManager实现炫酷的悬浮迷你音乐盒（上）](https://www.jianshu.com/p/95ceb0a2ed27)，WindowManager.LayoutParams属性详解。  
 [Android关于Canvas你所知道的和不知道的一切](https://www.jianshu.com/p/4bc05f646bfe)  
