@@ -32,3 +32,9 @@ RestfulTool
 Save Actions
 SequenceDiagram
 Translation
+
+Jetbrains系列产品重置试用方法：
+在Settings/Preferences... -> Plugins 内手动添加第三方插件仓库地址：https://plugins.zhile.io
+搜索：IDE Eval Reset插件进行安装。如果搜索不到请注意是否做好了上一步？网络是否通畅？
+插件会提示安装成功。
+插件是学习研究项目，源代码是开放的。源码仓库地址：https://gitee.com/pengzhile/ide-eval-resetter
