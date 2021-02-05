@@ -1,0 +1,34 @@
+version: 2021.02.01
+
+Chrome 插件：
+莎拉查词、AdBlocker
+
+网址：
+http://tool.yijingying.com/video/
+
+Notepad++ 插件：
+Compare
+JSON Viewer
+Mime tools
+Npp Converter
+NppExport
+
+IDEA 插件：
+Alibaba Java Coding Guidelines
+CamelCase
+Easy Code
+Free MyBatis plugin
+Git Commit Template
+Grep Console
+GsonFormatPlus
+IDE Eval Reset
+jclasslib Bytecode Viewer
+Key Promoter X
+Maven Helper
+MybatisLog
+Power Mode II
+Rainbow Brackets
+RestfulTool
+Save Actions
+SequenceDiagram
+Translation
