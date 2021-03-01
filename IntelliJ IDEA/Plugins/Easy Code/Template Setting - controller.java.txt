@@ -1,0 +1,45 @@
+##引入宏定义
+$!define
+
+##使用宏定义设置表名
+#setTableSuffix("Controller")
+
+##使用宏定义设置回调（保存位置与文件后缀）
+#save("/controller", ".java")
+
+##拿到主键
+#getPK()
+
+##使用宏定义设置包后缀
+#setPackageSuffix("controller")
+
+##导包
+import $!{tableInfo.savePackageName}.entity.${subDir}.$!{tableInfo.name};
+import $!{tableInfo.savePackageName}.service.${subDir}.$!{tableInfo.name}Service;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+
+##使用宏定义实现类注释信息
+#tableComment("表控制层")
+@RestController
+@RequestMapping("$!tool.firstLowerCase($tableInfo.name)")
+public class $!{tableName} {
+    /**
+     * 服务对象
+     */
+    @Resource
+    private $!{tableInfo.name}Service $!tool.firstLowerCase($tableInfo.name)Service;
+
+    /**
+     * 通过主键查询单条数据
+     *
+     * @param id 主键
+     * @return 单条数据
+     */
+    @GetMapping("selectOne")
+    public $!{tableInfo.name} selectOne($!pk.shortType id) {
+        return this.$!{tool.firstLowerCase($tableInfo.name)}Service.queryById(id);
+    }
+
+}

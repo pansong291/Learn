@@ -1,0 +1,78 @@
+##（Velocity宏定义）
+
+##设置子目录
+#set($subDir = "repo")
+#set($tableName = $tableInfo.name)
+
+##定义设置表名后缀的宏定义，调用方式：#setTableSuffix("Dao")
+#macro(setTableSuffix $suffix)
+    #set($tableName = $!tool.append($tableInfo.name, $suffix))
+#end
+
+##定义设置包名后缀的宏定义，调用方式：#setPackageSuffix("entity")
+#macro(setPackageSuffix $suffix)
+#if($suffix!="")package #end#if($tableInfo.savePackageName!="")$!{tableInfo.savePackageName}.#{end}$!{suffix}.$subDir;
+#end
+
+##定义直接保存路径与文件名简化的宏定义，调用方式：#save("/entity", ".java")
+#macro(save $path $fileName)
+    $!callback.setSavePath($tool.append($tableInfo.savePath, $path, "/$subDir"))
+    $!callback.setFileName($tool.append($!tableName, $fileName))
+#end
+
+##拿到主键，调用方式：#getPK()
+#macro(getPK)
+    #if(!$tableInfo.pkColumn.isEmpty())
+        #set($pk = $tableInfo.pkColumn.get(0))
+    #end
+#end
+
+##定义表注释的宏定义，调用方式：#tableComment("注释信息")
+#macro(tableComment $desc)
+/**
+ * $!{tableInfo.comment}($!{tableInfo.name})$desc
+ *
+ * @author $!author
+ * @since $!time.currTime()
+ */
+#end
+
+##定义GET，SET方法的宏定义，调用方式：#getSetMethod($column)
+#macro(getSetMethod $column)
+
+    public $!{tool.getClsNameByFullName($column.type)} get$!{tool.firstUpperCase($column.name)}() {
+        return $!{column.name};
+    }
+
+    public void set$!{tool.firstUpperCase($column.name)}($!{tool.getClsNameByFullName($column.type)} $!{column.name}) {
+        this.$!{column.name} = $!{column.name};
+    }
+#end
+
+##定义equals，hashCode方法的宏定义，调用方式：#equalsHashCodeMethod()
+#macro(equalsHashCodeMethod)
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        $!{tableInfo.name} that = ($!{tableInfo.name}) o;
+        return #foreach($column in $tableInfo.fullColumn)Objects.equals($!{column.name}, that.$!{column.name})#if($velocityHasNext) && #end#end;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(#foreach($column in $tableInfo.fullColumn)$!{column.name}#if($velocityHasNext), #end#end);
+    }
+#end
+
+##定义toString方法的宏定义，调用方式：#toStringMethod()
+#macro(toStringMethod)
+    @Override
+    public String toString() {
+        return "$!{tableInfo.name}{" +
+#foreach($column in $tableInfo.fullColumn)
+                "#if($velocityCount > 1), #end$!{column.name}=" + $!{column.name} +
+#end
+                '}';
+    }
+#end

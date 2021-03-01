@@ -1,0 +1,66 @@
+##引入宏定义
+$!define
+
+##使用宏定义设置表名
+#setTableSuffix("Service")
+
+##使用宏定义设置回调（保存位置与文件后缀）
+#save("/service", ".java")
+
+##拿到主键
+#getPK()
+
+##使用宏定义设置包后缀
+#setPackageSuffix("service")
+
+##导包
+import $!{tableInfo.savePackageName}.entity.${subDir}.$!{tableInfo.name};
+import java.util.List;
+
+##使用宏定义实现类注释信息
+#tableComment("表服务接口")
+
+public interface $!{tableName} {
+
+    /**
+     * 通过ID查询单条数据
+     *
+     * @param $!pk.name 主键
+     * @return 实例对象
+     */
+    $!{tableInfo.name} queryById($!pk.shortType $!pk.name);
+
+    /**
+     * 查询多条数据
+     *
+     * @param offset 查询起始位置
+     * @param limit 查询条数
+     * @return 对象列表
+     */
+    List<$!{tableInfo.name}> queryAllByLimit(int offset, int limit);
+
+    /**
+     * 新增数据
+     *
+     * @param $!tool.firstLowerCase($!{tableInfo.name}) 实例对象
+     * @return 实例对象
+     */
+    $!{tableInfo.name} insert($!{tableInfo.name} $!tool.firstLowerCase($!{tableInfo.name}));
+
+    /**
+     * 修改数据
+     *
+     * @param $!tool.firstLowerCase($!{tableInfo.name}) 实例对象
+     * @return 实例对象
+     */
+    $!{tableInfo.name} update($!{tableInfo.name} $!tool.firstLowerCase($!{tableInfo.name}));
+
+    /**
+     * 通过主键删除数据
+     *
+     * @param $!pk.name 主键
+     * @return 是否成功
+     */
+    boolean deleteById($!pk.shortType $!pk.name);
+
+}
