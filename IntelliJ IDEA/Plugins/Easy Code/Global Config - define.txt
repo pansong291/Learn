@@ -33,6 +33,7 @@
  * $!{tableInfo.comment}($!{tableInfo.name})$desc
  *
  * @author $!author
+ * @version 1.0
  * @since $!time.currTime()
  */
 #end
