@@ -33,11 +33,12 @@ public interface $!{tableName} {
     /**
      * 查询多条数据
      *
-     * @param offset 查询起始位置
-     * @param limit 查询条数
+     * @param $!tool.firstLowerCase($!{tableInfo.name}) 实例对象
+     * @param pageNum 当前页码
+     * @param pageSize 每页条数
      * @return 对象列表
      */
-    List<$!{tableInfo.name}> queryAllByLimit(int offset, int limit);
+    List<$!{tableInfo.name}> queryAllByLimit($!{tableInfo.name} $!tool.firstLowerCase($!{tableInfo.name}), int pageNum, int pageSize);
 
     /**
      * 新增数据
