@@ -50,7 +50,7 @@ public class $!{tableName} implements $!{tableInfo.name}Service {
      * @return 对象列表
      */
     @Override
-    public List<$!{tableInfo.name}> queryAllByLimit($!{tableInfo.name} $!tool.firstLowerCase($!{tableInfo.name}), int pageNum, int pageSize) {
+    public List<$!{tableInfo.name}> queryAllByPage($!{tableInfo.name} $!tool.firstLowerCase($!{tableInfo.name}), int pageNum, int pageSize) {
         return this.$!{tool.firstLowerCase($!{tableInfo.name})}Dao.queryAll($!tool.firstLowerCase($!{tableInfo.name}));
     }
 

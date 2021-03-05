@@ -38,7 +38,7 @@ public interface $!{tableName} {
      * @param pageSize 每页条数
      * @return 对象列表
      */
-    List<$!{tableInfo.name}> queryAllByLimit($!{tableInfo.name} $!tool.firstLowerCase($!{tableInfo.name}), int pageNum, int pageSize);
+    List<$!{tableInfo.name}> queryAllByPage($!{tableInfo.name} $!tool.firstLowerCase($!{tableInfo.name}), int pageNum, int pageSize);
 
     /**
      * 新增数据
