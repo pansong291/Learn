@@ -22,6 +22,7 @@ Alibaba Java Coding Guidelines
 CamelCase
 Easy Code
 Free MyBatis plugin
+GenerateAllSetter
 Git Commit Template
 Grep Console
 GsonFormatPlus
