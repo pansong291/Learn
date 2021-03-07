@@ -72,7 +72,7 @@
     public String toString() {
         return "$!{tableInfo.name}{" +
 #foreach($column in $tableInfo.fullColumn)
-                "#if($velocityCount > 1), #end$!{column.name}=" + $!{column.name} +
+                "#if($velocityCount > 1), #end$!{column.name}=#if($column.type.equals("java.lang.String"))'#end" + $!{column.name} +#if($column.type.equals("java.lang.String")) '\'' +#end
 #end
                 '}';
     }
