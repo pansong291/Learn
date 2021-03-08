@@ -60,7 +60,7 @@ $!mybatisSupport
     </insert>
 
     <!--批量新增数据-->
-    <insert id="insertBatch" keyProperty="$!pk.name" useGeneratedKeys="true">
+    <insert id="insertBatch">
         insert into $!{tableInfo.obj.parent.name}.$!{tableInfo.obj.name}(#foreach($column in $tableInfo.otherColumn)$!column.obj.name#if($velocityHasNext), #end#end)
         values
         <foreach collection="entities" item="entity" separator=",">
@@ -69,7 +69,7 @@ $!mybatisSupport
     </insert>
 
     <!--批量新增或按主键更新数据-->
-    <insert id="insertOrUpdateBatch" keyProperty="$!pk.name" useGeneratedKeys="true">
+    <insert id="insertOrUpdateBatch">
         insert into $!{tableInfo.obj.parent.name}.$!{tableInfo.obj.name}(#foreach($column in $tableInfo.otherColumn)$!column.obj.name#if($velocityHasNext), #end#end)
         values
         <foreach collection="entities" item="entity" separator=",">
