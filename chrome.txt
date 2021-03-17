@@ -1,4 +1,4 @@
-version: 2021.03.07
+version: 2021.03.17
 
 Chrome 插件：
 莎拉查词、AdBlocker
@@ -8,6 +8,7 @@ http://tool.yijingying.com/video/
 http://www.staticfile.org/
 https://www.jc2182.com/bootstrap/bootstrap-jiaocheng.html
 https://www.jquery123.com/
+https://jqueryapi.net/
 https://www.docs4dev.com/
 
 Notepad++ 插件：
